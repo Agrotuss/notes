@@ -96,3 +96,10 @@ ul li {
 footer {
 	font-size: 1.5rem;
 }
+
+.code-area {
+	padding: 40px;
+	background-color: #eee;
+	color: #822706;
+	margin-bottom: 10px;
+}

@@ -13,6 +13,40 @@
 			</div>
 		</div> <!-- /.info-item -->
 		<h1>Node&NPM</h1>
+		<div class="info-item">
+			<h2>Install Node.js</h2>
+			<p><span class="term">Node.js</span> makes <span class="term">JavaScript</span> a fully functional programming language, so it can run not in a browser window only but also on  local computers and servers operating with files and data bases.</p>
+			<p>Follow the <a href="https://nodejs.org/en/">Node Homepage</a> (https://nodejs.org/) and download it LTS version. Run the instalation file.</p>
+			<p>To check if the instalation was successful type in the command line <span class="command">node -v</span>.</p>
+			<p>"Out-of-the-box" <span class="term">Node.js</span> has a bunch of modules for different purposes.</p>
+		</div> <!-- /.info-item -->
+		<div class="info-item">
+			<h2>Some examples</h2>
+			<div class="code-area">
+				var fs = require('fs');<br><br>
+				fs.writeFile(__dirname + "/index.html", "&lt;h1&gt;HTML is Great!&lt;/h1&gt;", function(error) {<br>
+				&nbsp;&nbsp;&nbsp;if (error) {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return console.log(error);<br>
+				&nbsp;&nbsp;&nbsp;} else {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return console.log('Congrats!');<br>
+				&nbsp;&nbsp;&nbsp;}<br>
+				});
+			</div> <!-- /.code-area -->
+			<p>This code will create a new html file in the working directory with a level one title in it.</p>
+			<div class="code-area">
+				var fs = require('fs'),<br>
+				https = require('https');<br><br>
+				fs.writeFile(__dirname + "/index.html", "&lt;h1&gt;HTML is Great!&lt;/h1&gt;", function(error) {<br>
+				&nbsp;&nbsp;&nbsp;if (error) {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return console.log(error);<br>
+				&nbsp;&nbsp;&nbsp;} else {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return console.log('Congrats!');<br>
+				&nbsp;&nbsp;&nbsp;}<br>
+				});<br><br>
+				var myPhotoLocation = 'https://raw.githubusercontent.com/LearnWebCode/welcome-to-git/master/images/dog.jpg';<br><br>
+			</div> <!-- /.code-area -->
+			section3lecture8_16:43
+		</div> <!-- /.info-item -->
 
 		<footer>
 			<a href="#pageTop" class="gray-btn">Go Up</a>
