@@ -22,6 +22,7 @@
 		</div> <!-- /.info-item -->
 		<div class="info-item">
 			<h2>Some examples</h2>
+			<p>Lets create a JavaScript file <span class="term">test.js</span></p>
 			<div class="code-area">
 				var fs = require('fs');<br><br>
 				fs.writeFile(__dirname + "/index.html", "&lt;h1&gt;HTML is Great!&lt;/h1&gt;", function(error) {<br>
@@ -32,7 +33,8 @@
 				&nbsp;&nbsp;&nbsp;}<br>
 				});
 			</div> <!-- /.code-area -->
-			<p>This code will create a new html file in the working directory with a level one title in it.</p>
+			<p>After you run the <span class="command">node test.js</span> in the command line this code will create new html file in the working directory with a level one title in it.</p>
+			<p>The code below will also download an image from given url and save it in local file.</p>
 			<div class="code-area">
 				var fs = require('fs'),<br>
 				https = require('https');<br><br>
@@ -44,8 +46,11 @@
 				&nbsp;&nbsp;&nbsp;}<br>
 				});<br><br>
 				var myPhotoLocation = 'https://raw.githubusercontent.com/LearnWebCode/welcome-to-git/master/images/dog.jpg';<br><br>
+				https.get(myPhotoLocation, function(response) {<br>
+				&nbsp;&nbsp;&nbsp;response.pipe(fs.createWriteStream(__dirname + "/mydog.jpg"));<br>
+				});
 			</div> <!-- /.code-area -->
-			section3lecture8_16:43
+			section3lecture9
 		</div> <!-- /.info-item -->
 
 		<footer>
