@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Git notes</title>
+	<link rel="stylesheet" href="notes_style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="info-item">
+			<div class="nav" id="pageTop">
+				<a  class="gray-btn" href="node_npm.html">Node&NPM</a>
+			</div>
+		</div> <!-- /.info-item -->
+		<h1>Git Vocab</h1>
+		<div class="info-item">
+			<h2>Basic terms</h2>
+			<p><span class="term">Project</span> = Repository (repo).</p>
+			<p><span class="term">Working directory</span> = local folder where project lives.</p>
+			<p><span class="term">Staging</span> = control what we are going to commmit.</p>
+			<p><span class="term">Commit</span> = Git's way of "saving" history of changes. Git stores it locally on the hard drive in a hidden system file. The project's files can be restored using <span class="command">git checkout -- .</span>(space and a period) in the command line.</p>
+			<p><span class="term">GitHub</span> = remote repository.</p>
+			<p><span class="term">Push&Pull</span> = upload&download our commits to&from remote repository on GitHub.</p>
+		</div> <!-- /.info-item -->
+
+		<div class="info-item">
+			<h2>Install Git.</h2>
+			<p>Follow - <a href="https://git-scm.com/">Git's Homepage</a> ( https://git-scm.com/ ). Click "Download".</p>
+		</div> <!-- /.info-item -->
+
+		<div class="info-item">
+			<h2>Git personal settings:</h2>
+			<p>First, open GitBash.</p>
+			<ul>
+				<li>User name: <span class="command">git config --global user.name "Tom"</span>.</li>
+				<li>User e-mail: <span class="command">git config --global user.email "Tom@addres.com"</span>.</li>
+			</ul>
+		</div> <!-- /.info-item -->
+
+		<div class="info-item">
+			<h2>Basic commands.</h2>
+			<p><span class="command">pwd</span> - print working directory.</p>
+			<p><span class="command">cd dirName</span> - change working directory. Can use "drag&drop" method. Print <span class="command">cd</span> than <i>space</i> and drag the folder from the explorer window.</p>
+			<p><span class="command">mkdir "name"</span> - create directory.</p>
+			<p><span class="command">git init</span> - create new local repository in the folder.</p>
+			<p><span class="command">touch "fileName"</span> - create new file.</p>
+			<p><span class="command">git status</span> - current state of the working area.</p>
+			<p><span class="command">git add -A</span> - adding ALL files to the staging area.</p>
+			<p><span class="command">git commit -m "Clear message."</span> - saving changes.</p>
+			<p><span class="command">git checkout -- .</span> - restore to last commit.</p>
+			<p><span class="command">git clone https://github.com/Agrotuss/travel-site.git</span> - clone existing remote repository to local folder. Directory must be empty ( no git init ).</p>
+		</div><!-- /.info-item -->
+		<div class="info-item">
+			<h2>Creating GitHub repo</h2>
+			<p>Follow <a href="https://github.com/Agrotuss/">your GitHub account</a> (https://github.com/Agrotuss/).</p>
+			<p>Create new empty repository.</p>
+			<p>Create new folder on your computer. It name and the name of new repo must be the same.</p>
+			<h3>Case A</h3>
+			<p>Clone existing repo to your local folder:</p>
+			<p><span class="command">git clone https://github.com/LearnWebCode/travel-site-files.git</span></p>
+			<p>You can check current repo url</p>
+			<p><span class="command">git remote -v</span></p>
+			<p>Then change the remote repo url for your own</p>
+			<p><span class="command">git remote set-url origin https://github.com/Agrotuss/udemy_template.git</span></p>
+			<p>Push local files to remote repo</p>
+			<p><span class="command">git push origin master</span></p>
+			<p>Refresh your GitHub page. You'll see your files there.</p>
+			<h3>Case B</h3>
+			<p>You have create empty local repository</p>
+			<p><span class="command">git init</span></p>
+			<p>Add remote repository url</p>
+			<p><span class="command">git remote add origin https://github.com/Agrotuss/udemy_template.git</span></p>
+			<p>Then push files as in Case A.</p>
+		</div> <!-- /.info-item -->
+		<footer>
+			<a href="#pageTop" class="gray-btn">Go Up</a>
+		</footer>
+		section3lection6
+	</div> <!-- /.wrapper -->
+</body>
+</html>
