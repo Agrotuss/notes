@@ -14,9 +14,41 @@
 			</div>
 		</div> <!-- /.info-item -->
 		<h1>Gulp</h1>
+		<h2><span class="term">WARNING</span>: all listed below valid for <span class="term">Gulp 3</span>!!!</h2>
 		<div class="info-item">
-			<h2></h2>
-			<p></p>
+			<h2>Install Gulp</h2>
+			<p>You have to install <span class="term">Gulp</span> globally(for your computer) and locally(for your current project).</p>
+			<p><span class="command">npm install gulp-cli --global</span></p>
+			<p><span class="command">npm install gulp --save-dev</span></p>
+			<p>This will install the newest versions of code for the moment. If you need some exact version:</p>
+			<p><span class="command">npm install gulp-cli@1.0.1 --global</span></p>
+			<p><span class="command">npm install gulp@3.9.2 --save-dev</span></p>
+			<p><span class="term">@1.0.1</span> - is a version's number. The same rule will work for all Gulp plugins.</p>
+		</div> <!-- /.info-item -->
+		<div class="info-item">
+			<h2>Gulp-watch</h2>
+			 <p><span class="term">Gulp-watch</span> - can watch specific files and when it detects changes in this files it can trigger a <span class="term">gulp.task()</span> in response.</p>
+			<h3>Install gulp-watch</h3>
+			<p><span class="command">npm install gulp-watch --save-dev</span></p>
+			<p>Then you need to import it in the gulpfile.js</p>
+			<div class="code-area">
+				var watch = require("gulp-watch");
+			</div>
+			<p><span class="term">Gulp-watch</span> - can watch different files and trigger different tasks.</p>
+			<h3>Creating watch.task</h3>
+			<div class="code-area">
+				var watch = require("gulp-watch");<br><br>
+				gulp.task("watch", function() {<br><br>
+				&nbsp;&nbsp;&nbsp;watch("./app/index.html", function() {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gulp.start("html");<br>
+				&nbsp;&nbsp;&nbsp;});<br><br>
+				&nbsp;&nbsp;&nbsp;watch("./app/assets/styles/styles.css", function() {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gulp.start("styles");<br>
+				&nbsp;&nbsp;&nbsp;});<br>
+				});
+			</div>
+			<p>To run the code type - <span class="command">gulp watch</span>. It keeps working until you stop it <span class="command">ctrl + c</span></p>
+
 		</div> <!-- /.info-item -->
 		<div class="info-item">
 			<h2></h2>
