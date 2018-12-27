@@ -51,6 +51,31 @@
 
 		</div> <!-- /.info-item -->
 		<div class="info-item">
+			<h2>Some important terms</h2>
+			 <div class="code-area">
+			 	gulp.src(); - points to the location of files to work with.<br><br>
+			 	gulp.pipe() - any transformation or action we do to theese files.<br><br>
+			 	gulp.dest(); - points to the location of result file.		 
+			 </div>
+			 <p></p>
+		</div> <!-- /.info-item -->
+		<div class="info-item">
+			<h2>Install Gulp-postcss</h2>
+			 <p><span class="command">npm install gulp-postcss --save-dev</span></p>
+			 <p>Import postcss to the gulpfile.js</p>
+			 <div class="code-area">
+			 	var postcss = require("gulp-postcss");
+			 </div>
+			 <p><span class="term">Postcss</span> by itself dosn't do anything. It needs plugins or filters. Let us install and import <span class="term">autoprefixer</span>.</p>
+			 <p><span class="command">npm install autoprefixer --save-dev</span></p>
+			 <div class="code-area">
+			 	var autoprefixer = require("autoprefixer");
+			 </div>
+			 <p>In the same manner we can use <span class="term">postcss-simple-vars</span>. It allows to use variables when writing a css code. And <span class="term">postcss-nested</span> - allows nest css selectors.</p>
+			 <p><span class="command">npm install postcss-simple-vars --save-dev</span></p>
+			 <p><span class="command">npm install postcss-nested --save-dev</span></p>
+		</div> <!-- /.info-item -->
+		<div class="info-item">
 			<h2></h2>
 			 <p></p>
 		</div> <!-- /.info-item -->
