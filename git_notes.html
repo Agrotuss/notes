@@ -48,8 +48,16 @@
 			<p><span class="command">git status</span> - current state of the working area.</p>
 			<p><span class="command">git add -A</span> - adding ALL files to the staging area.</p>
 			<p><span class="command">git commit -m "Clear message."</span> - saving changes.</p>
+			<p><span class="command">git commit -am "Clear message."</span> - add and saving changes in one line.</p>
 			<p><span class="command">git checkout -- .</span> - restore to last commit.</p>
 			<p><span class="command">git clone https://github.com/Agrotuss/travel-site.git</span> - clone existing remote repository to local folder. Directory must be empty ( no git init ).</p>
+			<p><span class="command">git branch</span> - list of branches. Current branch checked with *.</p>
+			<p><span class="command">git branch branchName</span> - creating a new branch.</p>
+			<p><span class="command">git branch -d branchName</span> - deleting a branch.</p>
+			<p><span class="command">git checkout branchName</span> - switch to a branch.</p>
+			<p><span class="command">git checkout -b branchName</span> - creating a branch and switch to it in one command.</p>
+			<p><span class="command">git merge branchName</span> - merge branchName to current branch.</p>
+			<p><span class="command">git merge branchName --no-ff</span> - merge branchName to current branch with a "no fast forward" option. In next screen type <span class="command">:wq</span> and hit enter. This command creates a one common file for all commits being made before merging.</p>
 		</div><!-- /.info-item -->
 		<div class="info-item">
 			<h2>Creating GitHub repo</h2>
