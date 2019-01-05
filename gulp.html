@@ -14,6 +14,7 @@
 			</div>
 		</div> <!-- /.info-item -->
 		<h1>Gulp</h1>
+		<h2><span class="term">WARNING</span>: all listed below valid for <span class="term">Gulp 3</span>!!!</h2>
 		<div class="info-item">
 			<h2>Install Gulp</h2>
 			<p><span class="term">Gulp</span> is a build tool. It's like a record player. <span class="term">Gulp plagins</span> - is "records".</p>
@@ -23,6 +24,60 @@
 			<p>2. Install Gulp in your project.</p>
 			<p>In the command line move to your project folder and run</p>
 			<p><span class="command">npm install gulp --save-dev</span></p>
+			<p>This will install the newest versions of code for the moment. If you need some exact version:</p>
+			<p><span class="command">npm install gulp-cli@1.0.1 --global</span></p>
+			<p><span class="command">npm install gulp@3.9.2 --save-dev</span></p>
+			<p><span class="term">@1.0.1</span> - is a version's number. The same rule will work for all Gulp plugins.</p>
+		</div> <!-- /.info-item -->
+		<div class="info-item">
+			<h2>Gulp-watch</h2>
+			 <p><span class="term">Gulp-watch</span> - can watch specific files and when it detects changes in this files it can trigger a <span class="term">gulp.task()</span> in response.</p>
+			<h3>Install gulp-watch</h3>
+			<p><span class="command">npm install gulp-watch --save-dev</span></p>
+			<p>Then you need to import it in the gulpfile.js</p>
+			<div class="code-area">
+				var watch = require("gulp-watch");
+			</div>
+			<p><span class="term">Gulp-watch</span> - can watch different files and trigger different tasks.</p>
+			<h3>Creating watch.task</h3>
+			<div class="code-area">
+				var watch = require("gulp-watch");<br><br>
+				gulp.task("watch", function() {<br><br>
+				&nbsp;&nbsp;&nbsp;watch("./app/index.html", function() {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gulp.start("html");<br>
+				&nbsp;&nbsp;&nbsp;});<br><br>
+				&nbsp;&nbsp;&nbsp;watch("./app/assets/styles/styles.css", function() {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gulp.start("styles");<br>
+				&nbsp;&nbsp;&nbsp;});<br>
+				});
+			</div>
+			<p>To run the code type - <span class="command">gulp watch</span>. It keeps working until you stop it <span class="command">ctrl + c</span></p>
+
+		</div> <!-- /.info-item -->
+		<div class="info-item">
+			<h2>Some important terms</h2>
+			 <div class="code-area">
+			 	gulp.src(); - points to the location of files to work with.<br><br>
+			 	gulp.pipe() - any transformation or action we do to theese files.<br><br>
+			 	gulp.dest(); - points to the location of result file.		 
+			 </div>
+			 <p></p>
+		</div> <!-- /.info-item -->
+		<div class="info-item">
+			<h2>Install Gulp-postcss</h2>
+			 <p><span class="command">npm install gulp-postcss --save-dev</span></p>
+			 <p>Import postcss to the gulpfile.js</p>
+			 <div class="code-area">
+			 	var postcss = require("gulp-postcss");
+			 </div>
+			 <p><span class="term">Postcss</span> by itself dosn't do anything. It needs plugins or filters. Let us install and import <span class="term">autoprefixer</span>.</p>
+			 <p><span class="command">npm install autoprefixer --save-dev</span></p>
+			 <div class="code-area">
+			 	var autoprefixer = require("autoprefixer");
+			 </div>
+			 <p>In the same manner we can use <span class="term">postcss-simple-vars</span>. It allows to use variables when writing a css code. And <span class="term">postcss-nested</span> - allows nest css selectors.</p>
+			 <p><span class="command">npm install postcss-simple-vars --save-dev</span></p>
+			 <p><span class="command">npm install postcss-nested --save-dev</span></p>
 		</div> <!-- /.info-item -->
 		<div class="info-item">
 			<h2>Gulpfile.js</h2>
