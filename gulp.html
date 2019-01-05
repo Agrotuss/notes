@@ -15,12 +15,39 @@
 		</div> <!-- /.info-item -->
 		<h1>Gulp</h1>
 		<div class="info-item">
-			<h2></h2>
-			<p></p>
+			<h2>Install Gulp</h2>
+			<p><span class="term">Gulp</span> is a build tool. It's like a record player. <span class="term">Gulp plagins</span> - is "records".</p>
+			<p><span class="term">Gulp</span> = automation.</p>
+			<p>1. Install Gulp globally.</p>
+			<p><span class="command">npm install gulp-cli --global</span></p>
+			<p>2. Install Gulp in your project.</p>
+			<p>In the command line move to your project folder and run</p>
+			<p><span class="command">npm install gulp --save-dev</span></p>
 		</div> <!-- /.info-item -->
 		<div class="info-item">
-			<h2></h2>
-			 <p></p>
+			<h2>Gulpfile.js</h2>
+			 <p>In order to make Gulp work you should create gulpfile.js in a project root directory. This file will import gulp modules and define task for gulp to fullfil.</p>
+			 <div class="code-area">
+				var gulp = require('gulp');<br><br>
+				gulp.task('default', function() {<br>
+				&nbsp;&nbsp;&nbsp;console.log('Hooray!');<br>
+				});
+			</div> <!-- /.code-area -->
+			<p>In the task the first argument is a name, second is a function it does.</p>
+			<p>You can run default task simply by typing <span class="command">gulp</span>.</p>
+			<p>Specific task run <span class="command">gulp nameOfTask</span>.</p>
+		</div> <!-- /.info-item -->
+	
+		<div class="info-item">
+			<h2>Gulp plugins</h2>
+			<h3>gulp-watch</h3>
+			 <p><span class="term">gulp-watch</span> - watch for a certain files, and when we make changes in this files it triggers gulp.task.</p>
+			 <p>To install hit <span class="command">npm install gulp-watch --save-dev</span></p>
+			 <p>Import it to gulpfile.js</p>
+			 <div class="code-area">
+			 	var gulp = require('gulp'),<br>
+			 	watch = require('gulp-watch');
+			 </div> <!-- /.code-area -->
 		</div> <!-- /.info-item -->
 
 		<footer>
